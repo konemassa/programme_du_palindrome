@@ -1,0 +1,20 @@
+
+Function Palindrome(mot: string, i: integer:=0) integer;
+
+begin
+    // la fonction retourne 1 si le mot est un Palindrome
+    // la fonction retourne 0 si le mot n'est pas un Palindrome
+    //**condition d'arret du programme//
+    if (mot=' ' or mot.lenght=1) then
+        return 1;
+    end if
+    // Condition de verification pour poussuivre la verification ou pas
+    else if (mot[i]==mot[mot.lenght-i])then
+        return 1;
+    end if
+    // La recherche du milieu du mot
+    else if (i==(mot.lenght mod 2) and (mot.lenght-i)==(mot.lenght mod 2)) then
+        return 1;  
+    end if
+          
+end
